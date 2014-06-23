@@ -1,0 +1,44 @@
+html
+    |222
+    body
+        meta(http-equiv='Content-Type', content='text/html; charset=utf-8')
+        meta(http-equiv="Content-Type",content="text/html; charset=utf-8")
+        include css
+        .WB_feed
+            - for (var i = 0,len=data.length; i < len; i++)
+                .WB_feed_type.SW_fun.S_line2(tbinfo='ouid=#{data[i].oid}', diss-data='group_source=group_all', mid='#{data[i].mid}', action-type='feed_list_item')
+                    .WB_screen
+                        a.W_ico12.icon_choose(href='javascript:void(0);', suda-data='key=close_feed&value=close', action-data='miyou=0&is_new_filter=1&uid=#{data[i].oid}&nickname=#{data[i].nickname}&gender=m&mid=#{data[i].mid}&appname=微博 weibo.com&isactive=1&mblogsorttype=2&member_type=14&friendsfeed=0', title='展开屏蔽选项', action-type='feed_list_shield')
+                    .WB_feed_datail.S_line2.clearfix
+                        .WB_face
+                            a.W_face_radius(href='/u/#{data[i].oid}?from=feed&loc=avatar', title='#{data[i].nickname}')
+                                img(usercard='id=#{data[i].oid}', title='#{data[i].nickname}', alt='', width='50', height='50', src='http://tp2.sinaimg.cn/#{data[i].oid}/50/#{data[i].icon}/1')
+                        .WB_detail
+                            .WB_info
+                                a.WB_name.S_func1(nick-name='#{data[i].nickname}', title='#{data[i].nickname}', href='/u/#{data[i].oid}?from=feed&loc=nickname', usercard='id=#{data[i].oid}')
+                                    | #{data[i].nickname}
+                                a(target='_blank', href='http://verified.weibo.com/verify')
+                                    i.W_ico16.approve_co(title='微博机构认证')
+                                a(action-type='ignore_list', title='微博会员', target='_blank', href='http://vip.weibo.com/personal?from=main')
+                                    i.W_ico16.ico_member1
+                            .WB_text(node-type='feed_list_content') #{data[i].content}
+                            .WB_media_expand.SW_fun2.S_line1.S_bg1(style='display: none;', node-type='feed_list_media_disp')
+                            .WB_func.clearfix(node-type='feed_list_funcLink')
+                                .WB_handle
+                                    a(href='javascript:void(0);', action-type='feed_list_like', action-data='version=mini&qid=heart&mid=#{data[i].mid}&like_src=1', title='赞')
+                                        em.W_ico20.icon_praised_b
+                                        | (3)
+                                    i.S_txt3 |
+                                    a(suda-data='key=smart_feed&value=time_sort_tran', href='javascript:void(0);', action-history='rec=1', action-type='feed_list_forward', action-data='allowForward=1&url=http://weibo.com/#{data[i].oid}/B1YoksCo5&mid=#{data[i].mid}&name=#{data[i].nickname}&uid=#{data[i].oid}&domain=#{data[i].oid}&pid=bf20e4b5gw1efwgjrwz3dj20k00qogn8') 转发
+                                    i.S_txt3 |
+                                    a(suda-data='key=smart_feed&value=time_sort_collect', href='javascript:void(0);', diss-data='fuid=#{data[i].oid}', action-type='feed_list_favorite') 收藏
+                                    i.S_txt3 |
+                                    a(suda-data='key=smart_feed&value=time_sort_comm', href='javascript:void(0);', action-type='feed_list_comment', action-data='ouid=#{data[i].oid}&location=home') 评论(1)
+                                .WB_from
+                                    a.S_link2.WB_time(target='_blank', href='/#{data[i].oid}/B1YoksCo5?ref=home', title='2014-04-29 14:45', date='1398753909000', node-type='feed_list_item_date', suda-data='key=tblog_home_new&value=feed_time') 20分钟前
+                                    em.S_txt2 来自
+                                    a.S_link2(suda-data='key=tblog_home_new&value=feed_come_from', action-type='app_source', target='_blank', href='http://weibo.com/', rel='nofollow') 微博 weibo.com
+                                    span.hover
+                                        em.S_txt3 |
+                                        a(href='javascript:void(0);', onclick='javascript:window.open("http://service.account.weibo.com/reportspam?rid=#{data[i].mid}&type=1&from=10101&url=&bottomnav=1&wvr=5", "newwindow", "height=700, width=550, toolbar =yes, menubar=no, scrollbars=yes, resizable=yes, location=no, status=no");') 举报
+                            .WB_media_expand.repeat.S_line1.S_bg4(node-type='feed_list_repeat', style='display:none;')

@@ -1,0 +1,12 @@
+{
+  "server" : {
+    "port" : [8001,8002]
+  },
+  "processtitle":"koa-jade-workflow",
+  "site" : {
+    "views":"views"
+  },
+  "redis" : {
+    "port" : 6379
+  }
+}
