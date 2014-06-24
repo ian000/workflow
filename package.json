@@ -15,7 +15,12 @@
     "grunt-contrib-watch": "~0.6.1",
     "load-grunt-tasks": "~0.4.0",
     "url": "^0.10.1",
-    "open": "0.0.5"
+    "open": "0.0.5",
+    "koa-router": "^3.1.4",
+    "utile": "^0.2.1",
+    "forever": "^0.11.1",
+    "optimist": "^0.6.1",
+    "koa": "^0.8.0"
   },
   "devDependencies": {
     "koa-route": "~1.0.2",

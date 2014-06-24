@@ -1,13 +1,12 @@
 "use strict";
 
-var path = require('path'),
-    async = require('utile').async,
-    forever = require('forever'),
-    config = require('./lib/config');
-
-// Array config data
-var script = path.join(__dirname, './lib/index.js'),
-    ports = config.server.port;
+var path = require('path')
+  , async = require('utile').async
+  , forever = require('forever')
+  , conf = require('./lib/config')
+  , script = path.join(__dirname, './lib/router.js')
+  , ports = conf.server.port
+  ;
 
 function startServer (port, next) {
   var child = new (forever.Monitor) (script, {
