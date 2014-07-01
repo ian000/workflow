@@ -21,10 +21,10 @@ var fakeData = {
 };
 
 var data2 = {
-  a:{
+  a:{},
+  b:{
     b:2
-  },
-  b:{}
+  }
 };
 
 function loop(fake, data){
@@ -53,9 +53,9 @@ function loop(fake, data){
   return reslults;
 }
 
-//console.log(loop(fakeData, data2));
-if(module){
-  module.exports = loop;
-}
+console.log(loop(fakeData, data2));
+// if(module){
+//   module.exports = loop;
+// }
 
 

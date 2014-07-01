@@ -3,6 +3,7 @@
     "port" : [8001,8002]
   },
   "processtitle":"koa-jade-workflow",
+  "isDev":true,
   "site" : {
     "views":"views"
   },

@@ -6,6 +6,7 @@ module.exports = function(grunt){
 
   //Load Plugin(s)
   require('load-grunt-tasks')(grunt);
+
   //Project Configuration
   grunt.initConfig({
     jade: {
@@ -89,11 +90,12 @@ module.exports = function(grunt){
   grunt.loadNpmTasks('grunt-contrib-jade');
 
   //Register Task
-  //生产环境没有liveReload
-  grunt.registerTask('default',['jshint:all','jade','shell:stopProd','shell:startProd']);
 
-  //开发环境配置liveReaload
-  grunt.registerTask('dev',['jshint:all','jade','shell:stopDev','shell:startDev','watch']);
+  //生产环境没有
+  grunt.registerTask('default',['jshint:all','jade','shell:startProd']);
+
+  //开发环境配置liveReload
+  grunt.registerTask('dev',['jshint:all','jade','shell:startDev','watch']);
 
   grunt.event.on('watch', function(action, filepath) {
     http.get("http://w.weibo.com/onfilechanged?filepath="+filepath, function(res) {

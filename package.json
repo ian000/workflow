@@ -34,16 +34,16 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/ian000/koa-jade-workflow"
+    "url": ""
   },
   "keywords": [
     "koa",
     "workflow",
     "jade"
   ],
-  "author": "queckezz",
+  "author": "ianzhao",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/queckezz/koa-views/issues"
+    "url": ""
   }
 }
