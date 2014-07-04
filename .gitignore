@@ -5,3 +5,4 @@ node_modules
 sftp-config.json
 *.log
 *.html
+undefined
