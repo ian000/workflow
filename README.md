@@ -58,7 +58,6 @@ $ npm install koa-jade-workflow （不会把这个提交到npm，忽略这个命
   3. 每次保存jade ,  http://w.weibo.com 下的对应网页会自动刷新。
 
 
-
 ### 关于调试与报错
 
   1. 编译错误
@@ -68,7 +67,7 @@ $ npm install koa-jade-workflow （不会把这个提交到npm，忽略这个命
   3. 远程api错误 ：
       1. 数据选择策略：
           1. 按路由取得相应的api数据，如果不存在，写 console.log:isApiDta:false
-          2. 取得api以后，比较api与假数据的key如果不一致，写 console.log: isApiDta:false
+          2. 取得api以后，比较api与假数据的key如果不一致，写 console.log: isApiDta:false ，dataKeys是一个keys异同的数组
           3. 都通真假数据对比通过校验，用api渲染页面，写console.log: isApiDta:true
 
 ### 关于模板渲染性能
@@ -77,6 +76,9 @@ $ npm install koa-jade-workflow （不会把这个提交到npm，忽略这个命
 ### 关于页面请求时间
   e.g :
   console.log: requestTime: 2ms
+### 关于请求api接口的耗时
+  e.g :
+  console.log: requestApiSpan: 2001ms
 
 ## 日志位置
 
@@ -112,7 +114,6 @@ $ npm install koa-jade-workflow （不会把这个提交到npm，忽略这个命
 
 ## TODO
   1. 全局编译时候应该忽略配置项里的文件or文件夹
-  2. 与远程api数据校对
   3. 服务端性能监控
   4. 省略。。。
 
