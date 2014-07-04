@@ -5,33 +5,35 @@ Render jade views with preCompile
 ## Installation
 
 ```
-$ npm install koa-jade-workflow （未提交到npm）
+$ npm install koa-jade-workflow （不会把这个提交到npm，忽略这个命令吧）
 
 后续会托管提交到内部的gitlab上，现在想安装，跟我要代码 ：）
 ```
 ## 与webOS有啥不同？
   1. 实现真正的大前端
-    1. 访客实际访问的是前端组提供的nodejs服务
+    1. 打开网页，访客实际访问的是前端组提供的nodejs服务
     2. 后端只做数据接口
-  2. 前端团队自由可控的jade在线报错
+  2. 前端团队自由可控的jade在线报错,支持jade官方标准语法
   3. 开发阶段基于测试机的liveRelaod
   4. 与后端基于fakeData 的同步开发，当后端api接口按约定开发完毕，自动用改api数据渲染jade。
   5. 前端可能比以前更累了（承担了服务端的部分工作）。但跨团队沟通应该更高效（反正出发点之一就是这个）
   6. 提高开发质量（这个webos也能）
-      1. onsave 的 jsHint
-      2. svn preCommit check
-      3. 强制型的 code review
+      1. onsave 的 jsHint(定制)
+      2. svn preCommit check 【TODO】
+      3. 强制型的 code review 【todo】
+      4. ucss 【TODO】://github.com/operasoftware/ucss
+      5. BDD + TDD 【TODO】
   7. 将前端团队技术领域拓展到服务端（也许你不在乎这个）
 
 ## How to start with workflow and STK ?
 ### 工具准备
   1. ssh 登陆器
-  2. sftp 工具（推荐sublime + swftp plugin）;
+  2. sftp 工具（推荐sublime + swftp plugin）（神器webstrom，自带swft功能，机器性能好的，推荐使用）;
 
 ### 部署(TODO:一键部署)
 （其实理想化一点，应该有个内部的云开发平台，不需要每个人都依赖自己的开发机，但是有开发成本. 现在我来帮各位安装）
   1. 部署t4
-  2. 部署 workflow
+  2. 部署 workflow, npm install
   3. 前端代理（haproxy）
 
 ### 如何与原来的t4 ,t5目录结合
@@ -44,11 +46,18 @@ $ npm install koa-jade-workflow （未提交到npm）
   7. 执行  grunt dev
   8. 确保通过 http://w.weibo.com 可以访问到workflow
 
-### 进入开发阶段
+### 项目开始阶段
+  （与后端约定好接口的数据结构与测试的api地址，就可以并行开发了）
+  1. 与后端的接口约定的假数据是通过 /data0/koa-jade-workflow/data 文件夹的 *.json文件配置的
+  2. 后端的实际api接口保存在 /data0/koa-jade-workflow/lib/dataMap.json中。
 
+
+### 进入开发阶段
   1. 用浏览器打开 http://w.weibo.com 可以看到首页，由来自 t4/views/index.jade 渲染而成
   2. 用sublime sftp 链接到你的测试机下的t4文件夹 ,为了方便 "upload_on_save": true
-  3. 每次保存jade ,  http://w.weibo.com 下的对应网页，会自动刷新。
+  3. 每次保存jade ,  http://w.weibo.com 下的对应网页会自动刷新。
+
+
 
 ### 关于调试与报错
 
@@ -88,18 +97,29 @@ $ npm install koa-jade-workflow （未提交到npm）
   3. 单进程模式启动
     node ./lib/router -p 8001
 
+  4.查看服务是否启动成功
+    netstat -lnput 看指定端口是否启动成功
+
 ## bash
-  启动服务:    cd /data0/koa-jade-workflow ,  sh init.d/bootDev.sh start
-  停止服务:    stop
-  重启服务:    restart
+  1. 启动服务:    cd /data0/koa-jade-workflow
+                 sh init.d/bootDev.sh start
+  2. 停止服务:    stop
+  3. 重启服务:    restart
+
+## test
+
+  1. npm test  【TODO】
 
 ## TODO
   1. 全局编译时候应该忽略配置项里的文件or文件夹
   2. 与远程api数据校对
+  3. 服务端性能监控
+  4. 省略。。。
 
 ##Contributors
-  1. zhaoxin
-  2. 求加入。。。
+  1. kongbo
+  2. zhaoxin
+  3. 求加入。。。
 
 ## Licence
 
