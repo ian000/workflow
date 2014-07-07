@@ -1,3 +1,4 @@
 {
-  "index" : "http://w.weibo.com/api/index"
+  "index" : "http://w.weibo.com/api/index",
+  "merchant1" : "http://w.weibo.com/api/merchant"
 }

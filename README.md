@@ -25,22 +25,22 @@ $ npm install koa-jade-workflow （不会把这个提交到npm，忽略这个命
       5. BDD + TDD 【TODO】
   7. 将前端团队技术领域拓展到服务端（也许你不在乎这个）
 
-## How to start with workflow and STK ?
+## How to start with workflow and 内部框架 ?
 ### 工具准备
   1. ssh 登陆器
   2. sftp 工具（推荐sublime + swftp plugin）（神器webstrom，自带swft功能，机器性能好的，推荐使用）;
 
 ### 部署(TODO:一键部署)
 （其实理想化一点，应该有个内部的云开发平台，不需要每个人都依赖自己的开发机，但是有开发成本. 现在我来帮各位安装）
-  1. 部署t4
+  1. 部署project
   2. 部署 workflow, npm install
   3. 前端代理（haproxy）
 
-### 如何与原来的t4 ,t5目录结合
+### 如何与原来的项目结合
   0. 登入联调开发机
-  1. 在原有t4目录下 新增文件夹 views(里面装载jade文件)
+  1. 在原有项目目录下 新增文件夹 views(里面装载jade文件)
   2. 将此目录软连到  /data0/koa-jade-workflow/views
-  3. 确保通过 http://js.t.sinajs.cn/ 可以访问到t4目录
+  3. 确保通过 http://js.t.sinajs.cn/ 可以访问到项目目录
   4. 切到 /data0/koa-jade-workflow/ 下启workflow动服务
   6. 确保 livereload默认端口 35729不被占用
   7. 执行  grunt dev
@@ -53,8 +53,8 @@ $ npm install koa-jade-workflow （不会把这个提交到npm，忽略这个命
 
 
 ### 进入开发阶段
-  1. 用浏览器打开 http://w.weibo.com 可以看到首页，由来自 t4/views/index.jade 渲染而成
-  2. 用sublime sftp 链接到你的测试机下的t4文件夹 ,为了方便 "upload_on_save": true
+  1. 用浏览器打开 http://w.weibo.com 可以看到首页，由来自 project/views/index.jade 渲染而成
+  2. 用sublime sftp 链接到你的测试机下的project文件夹 ,为了方便 "upload_on_save": true
   3. 每次保存jade ,  http://w.weibo.com 下的对应网页会自动刷新。
 
 
