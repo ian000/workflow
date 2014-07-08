@@ -40,7 +40,7 @@ $ npm install koa-jade-workflow （不会把这个提交到npm，忽略这个命
   0. 登入联调开发机
   1. 在原有项目目录下 新增文件夹 views(里面装载jade文件)
   2. 将此目录软连到  /data0/koa-jade-workflow/views
-  3. 确保通过 http://js.t.sinajs.cn/ 可以访问到项目目录
+  3. 确保通过 http://js.t.xxxxjs.cn/ 可以访问到项目目录
   4. 切到 /data0/koa-jade-workflow/ 下启workflow动服务
   6. 确保 livereload默认端口 35729不被占用
   7. 执行  grunt dev
