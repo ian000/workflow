@@ -44,7 +44,7 @@ $ npm install koa-jade-workflow （不会把这个提交到npm，忽略这个命
   4. 切到 /data0/koa-jade-workflow/ 下启workflow动服务
   6. 确保 livereload默认端口 35729不被占用
   7. 执行  grunt dev
-  8. 确保通过 http://w.weibo.com 可以访问到workflow
+  8. 确保通过 http://w.xxxxx.com 可以访问到workflow
 
 ### 项目开始阶段
   （与后端约定好接口的数据结构与测试的api地址，就可以并行开发了）
@@ -53,9 +53,9 @@ $ npm install koa-jade-workflow （不会把这个提交到npm，忽略这个命
 
 
 ### 进入开发阶段
-  1. 用浏览器打开 http://w.weibo.com 可以看到首页，由来自 project/views/index.jade 渲染而成
+  1. 用浏览器打开 http://w.xxxxx.com 可以看到首页，由来自 project/views/index.jade 渲染而成
   2. 用sublime sftp 链接到你的测试机下的project文件夹 ,为了方便 "upload_on_save": true
-  3. 每次保存jade ,  http://w.weibo.com 下的对应网页会自动刷新。
+  3. 每次保存jade ,  http://w.xxxxx.com 下的对应网页会自动刷新。
 
 
 ### 关于调试与报错
@@ -84,9 +84,9 @@ $ npm install koa-jade-workflow （不会把这个提交到npm，忽略这个命
 
    1.  /log 文件夹下
    2. 标准输出
-        workflow-weibo-out.log
+        workflow-xxxxx-out.log
    3. 错误输出
-        workflow-weibo-err.log
+        workflow-xxxxx-err.log
 
 ## 进程守护
   1. 当改变 workflow 文件夹下文件，忽略 .foreverignore里面标注的文件or文件夹  服务会自动重启
