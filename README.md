@@ -17,7 +17,7 @@ $ npm install koa-jade-workflow （不会把这个提交到npm，忽略这个命
   3. 开发阶段基于测试机的liveRelaod
   4. 与后端基于fakeData 的同步开发，当后端api接口按约定开发完毕，自动用改api数据渲染jade。
   5. 前端可能比以前更累了（承担了服务端的部分工作）。但跨团队沟通应该更高效（反正出发点之一就是这个）
-  6. 提高开发质量（这个webos也能）
+  6. 提高开发质量
       1. onsave 的 jsHint(定制)
       2. svn preCommit check 【TODO】
       3. 强制型的 code review 【todo】
